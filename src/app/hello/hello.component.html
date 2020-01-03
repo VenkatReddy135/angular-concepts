@@ -1,0 +1,21 @@
+<p>hello works!</p>
+<h1 class="num3">EMPLOYEE LIST</h1>
+<div class="container-fluid">
+<table border="3">
+  <tr>
+    <td style="color:red">EMP ID</td>
+    <td style="color:blueviolet">EMP NAME</td>
+    <td style="color:orangered">EMP AREA</td>
+    <td style="color:cornflowerblue">EMP DETAILS</td>
+  </tr>
+  <tr  *ngFor="let employee of employees">
+  <td>{{employee.id}}</td>
+  <td>{{employee.name}}</td>
+  <td>{{employee.area}}</td>
+  <td><input type="button" value="add" class="btn btn-success">
+    <input type="button" value="delete" class="btn btn-danger">
+</td>
+  </tr>
+</table>
+</div>
+<hr><hr>

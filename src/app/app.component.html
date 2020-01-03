@@ -1,0 +1,115 @@
+
+  <!-- attribute binding  -->
+<h2 [class]="num1">venkat</h2>
+<hr>
+   <!-- property binding -->
+<input type=text value="venkat" [disabled]="haserror">
+<hr>
+       <!-- class binding -->
+<h1 [class.venkat]="defend">hello</h1>
+<h1 [ngClass]="obj">mosh</h1>
+<hr>
+       <!-- style binding -->
+<h1 [style.color]="hasend">welcome venkat</h1>
+<h1 [style.color]="haserror1?'red':'blue'">dhoni-virat</h1>
+<h1 [ngStyle]="value">india</h1>
+<hr>
+ <!-- interpolation -->
+<button (click)="hello()">greet</button>
+<h1>{{message}}</h1>
+<hr>
+  <!-- $event binding -->
+<h1>{{tring}}</h1>
+<button (click)="add($event)">add</button><br><br>
+<hr>
+   <!-- template reference variable -->
+<input type="text" #temp >
+<button (click)="log(temp.value)">log</button><br><br>
+<hr>
+<!-- two way data binding -->
+<input type="text" [(ngModel)]="ravi">
+<h1>{{ravi}}</h1>
+<hr>
+<!-- structural directives -->
+ <!-- *ngIf Directive -->
+ <h1 style="color:red">STRUCTURAL DIRECTIVES</h1>
+
+
+<div *ngIf="displayName;then thenBlock;else elseBlock">
+</div>
+<ng-template #thenBlock>
+<h1>hello venkat! how do you do??</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1></h1>
+</ng-template>
+<button (click)="see()">see</button>
+<button (click)="hide()">hide</button><br><br>
+<button (click)="toggle()">showhide</button>
+<!-- ngSwitch Directive -->
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'">you have picked red</p>
+    <p *ngSwitchCase="'blue'">you have picked blue</p>
+    <p *ngSwitchCase="'green'">you have picked green</p>
+    <p *ngSwitchDefault>you have selected other option</p>
+    
+</div>
+<!-- ngFor Directive -->
+<ul *ngFor="let employee of employees">
+    <li>{{employee.id}}</li>
+    <li>{{employee.name}}</li>
+</ul>
+
+    <li *ngFor="let color of colors">{{color}}<li>
+      <hr>
+
+ <!-- tranfer of data from parent to child and child to parent-->
+ <h1>{{message2}}</h1>
+
+ <!-- pipes  -->
+ <h1>{{title|slice:3:6}}</h1>
+
+ 
+<hr>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="padding:15px">
+ <app-test [parentData]="name" (Event)="message2=$event"></app-test>
+ <app-hello></app-hello>
+</div>
